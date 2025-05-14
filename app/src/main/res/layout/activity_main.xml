@@ -436,14 +436,14 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- Explore Button -->
+
         <Button
-            android:id="@+id/button_to_activity2"
+            android:id="@+id/item_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="16dp"
-            android:text="Explore More Products"
+            android:text="Move to Item List"
             android:backgroundTint="#0C1444"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
