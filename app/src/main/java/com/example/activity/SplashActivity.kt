@@ -14,6 +14,7 @@ class SplashActivity : AppCompatActivity() {
         // Optional: set a splash screen layout
         setContentView(R.layout.activity_splash)
 
+
         // Delay then launch PopupActivity
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@SplashActivity, PopupActivity::class.java)
