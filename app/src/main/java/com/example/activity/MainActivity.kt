@@ -12,7 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Find the button and set click listener
+        val preferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+
+        // Logout Button: Setup click listener correctly
+        val logoutButton = findViewById<Button>(R.id.buttonLogout)
+        logoutButton.setOnClickListener {
+            preferences.edit().clear().apply()
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+
+        // Navigate to Second Activity
         val buttonToSecond = findViewById<Button>(R.id.item_list)
         buttonToSecond.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)

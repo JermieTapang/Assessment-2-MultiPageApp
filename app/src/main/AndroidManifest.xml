@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Activity"
         tools:targetApi="31">
 
-        <!-- SplashActivity (entry point) -->
+        <!-- Launcher Activity: SplashActivity -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -28,6 +28,11 @@
             </intent-filter>
         </activity>
 
+        <!-- LoginActivity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
         <!-- PopupActivity -->
         <activity
             android:name=".PopupActivity"
@@ -38,7 +43,7 @@
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- MainActivity2 (if used) -->
+        <!-- Optional: Second Main Activity -->
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
